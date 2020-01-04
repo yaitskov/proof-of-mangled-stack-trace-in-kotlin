@@ -19,6 +19,10 @@
             <plugin>
               <artifactId>maven-surefire-plugin</artifactId>
               <version>${sure.fire.version}</version>
+              <configuration>
+                <argLine>-ea -Dkotlinx.coroutines.stacktrace.recovery=true</argLine>
+                <forkMode>once</forkMode>
+              </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
